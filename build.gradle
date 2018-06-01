@@ -1,6 +1,10 @@
 plugins {
     id 'java'
+    id 'org.springframework.boot' version '2.0.2.RELEASE'
 }
+
+apply plugin: 'java'
+apply plugin: 'io.spring.dependency-management'
 
 group 'kz.akezhan.poc'
 version '1.0.0'
@@ -12,8 +16,8 @@ repositories {
 }
 
 dependencies {
-    compile 'org.springframework.boot:spring-boot-starter-web:2.0.2.RELEASE'
-    compile 'org.codehaus.groovy:groovy-templates:2.5.0'
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    compile 'org.springframework.boot:spring-boot-starter-thymeleaf'
 
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
